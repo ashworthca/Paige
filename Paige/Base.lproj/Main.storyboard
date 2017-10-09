@@ -1,24 +1,622 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DidactGothic.ttf">
+            <string>DidactGothic-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dh6-xH-Ydm">
+                                <rect key="frame" x="8" y="21" width="885" height="125"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Vei-op-dkF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="70"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="btnRead:" destination="dkx-z0-nzr" eventType="touchUpOutside" id="hEk-oh-L8U"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2Z-t0-5HJ">
+                                <rect key="frame" x="908" y="48.5" width="100" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Ko-nX-6Xf"/>
+                                    <constraint firstAttribute="height" constant="70" id="Yhp-DY-O2A"/>
+                                </constraints>
+                                <state key="normal" title="&lt;&lt;" image="x.png">
+                                    <color key="titleColor" red="1" green="0.075016151424606381" blue="0.14697968284022811" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackspace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPz-Jt-Poy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr7-qX-L82">
+                                <rect key="frame" x="24" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="4Uu-ca-WbF"/>
+                                    <constraint firstAttribute="height" constant="75" id="gjn-VH-Tlv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="Q">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nag-EA-0dQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGa-Pj-Tbr">
+                                <rect key="frame" x="624" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="cs0-eJ-mZJ"/>
+                                    <constraint firstAttribute="height" constant="75" id="qer-bQ-GQw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="U">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="H5R-Pt-qeZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r43-gF-egG">
+                                <rect key="frame" x="724" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="A8q-hP-IFE"/>
+                                    <constraint firstAttribute="width" constant="75" id="bAC-wl-DT8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="I">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="vXA-a8-Kxi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwR-PQ-iNl">
+                                <rect key="frame" x="824" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="iSG-YI-5LI"/>
+                                    <constraint firstAttribute="height" constant="75" id="pdr-Cl-XPq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="O">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="AFa-SB-cqO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPl-bh-jXK">
+                                <rect key="frame" x="70" y="311" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Rvd-82-PLR"/>
+                                    <constraint firstAttribute="height" constant="75" id="i9Q-Ca-P0u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="TKw-aq-7pY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-mT-nvp">
+                                <rect key="frame" x="124" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Yih-Bh-8uT"/>
+                                    <constraint firstAttribute="width" constant="75" id="gsB-u7-127"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="W">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="qOe-Ce-jKH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z40-uU-vZf">
+                                <rect key="frame" x="224" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="T0E-Hj-epc"/>
+                                    <constraint firstAttribute="height" constant="75" id="yns-GA-hry"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="E">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="Htd-rc-3ti"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLi-Vi-kdZ">
+                                <rect key="frame" x="324" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3qG-M3-gxs"/>
+                                    <constraint firstAttribute="height" constant="75" id="Jtm-DK-lg3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="R">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="Z4j-JU-h6n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JC-Th-IyI">
+                                <rect key="frame" x="524" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="4ZX-nQ-h4f"/>
+                                    <constraint firstAttribute="height" constant="75" id="X8e-aF-mxb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="Y">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="Z22-TV-swL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8h-VJ-iKK">
+                                <rect key="frame" x="424" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="r3Y-35-vgi"/>
+                                    <constraint firstAttribute="height" constant="75" id="xlC-Kg-ro3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="T">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="78m-O2-quc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw2-k3-Aip">
+                                <rect key="frame" x="924" y="196" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="YwB-iL-xpm"/>
+                                    <constraint firstAttribute="height" constant="75" id="wdb-yt-kij"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="P">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="4Jh-WK-ce1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-gs-uSC">
+                                <rect key="frame" x="170" y="311" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="6Ck-Pr-M1a"/>
+                                    <constraint firstAttribute="width" constant="75" id="QmJ-Cd-v0K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="S">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="Rp9-Pm-ArT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqo-wo-02q">
+                                <rect key="frame" x="270" y="310" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="34y-lA-fcZ"/>
+                                    <constraint firstAttribute="width" constant="75" id="lhm-Lh-cMy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="6aI-zk-4gd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLN-pO-XoV">
+                                <rect key="frame" x="370" y="310" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="gmh-pR-aXS"/>
+                                    <constraint firstAttribute="height" constant="75" id="ujB-Vb-3Wz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="F">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="1aZ-CO-1Ws"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIe-25-Txj">
+                                <rect key="frame" x="470" y="310" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Jub-PQ-fgR"/>
+                                    <constraint firstAttribute="height" constant="75" id="uBw-8e-oVG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="G">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="QnB-LP-3oK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-F4-Bnj">
+                                <rect key="frame" x="570" y="310" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Fs1-Bg-Hbx"/>
+                                    <constraint firstAttribute="width" constant="75" id="QHF-bv-o7f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="H">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="t8C-TV-GsL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKP-vP-T4W">
+                                <rect key="frame" x="670" y="311" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="3o9-0F-IyT"/>
+                                    <constraint firstAttribute="width" constant="75" id="68o-Y7-N9A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="J">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="Cq9-Dc-EPy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-lu-xFp">
+                                <rect key="frame" x="770" y="311" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="0vP-0F-7uE"/>
+                                    <constraint firstAttribute="height" constant="75" id="p6A-zc-p3S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="K">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="YuA-gT-IcO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3e8-Or-waJ">
+                                <rect key="frame" x="870" y="311" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="nK8-x9-6RK"/>
+                                    <constraint firstAttribute="width" constant="75" id="vX4-PQ-8bu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="L">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="449-hc-RCz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-VC-fkl">
+                                <rect key="frame" x="100" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="2pH-IN-ssR"/>
+                                    <constraint firstAttribute="height" constant="75" id="oeF-6C-AhQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="Z">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="J5w-Zi-B5g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23A-Mz-OwH">
+                                <rect key="frame" x="205" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9iy-xV-xhH"/>
+                                    <constraint firstAttribute="width" constant="75" id="cw2-iF-6XH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="a0P-5W-xhl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBa-Vg-ZGj">
+                                <rect key="frame" x="310" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="4Kq-uw-ibo"/>
+                                    <constraint firstAttribute="height" constant="75" id="d9W-Tm-R4R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="A5I-78-SYO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-xo-gpD">
+                                <rect key="frame" x="415" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="SJO-Zn-EBs"/>
+                                    <constraint firstAttribute="height" constant="75" id="aoW-Mf-0xT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="V">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="uDh-05-Z9x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpt-eZ-GzO">
+                                <rect key="frame" x="520" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="cuT-QP-pqK"/>
+                                    <constraint firstAttribute="height" constant="75" id="d33-C8-fy6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="3EY-Ys-cN7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQC-H7-fAi">
+                                <rect key="frame" x="625" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="b1e-Bo-umB"/>
+                                    <constraint firstAttribute="width" constant="75" id="oK8-9G-DEC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="N">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="HwH-Lj-i6S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnr-Vq-Hdp">
+                                <rect key="frame" x="730" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="6VN-8B-nYV"/>
+                                    <constraint firstAttribute="height" constant="75" id="8U4-lR-H2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="M">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="QWK-By-DGl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-Xf-Yci">
+                                <rect key="frame" x="835" y="426" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.74839953999171116" green="0.75792761854856772" blue="0.78487289507772018" alpha="0.1190580985915493" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="AzB-Mx-WeT"/>
+                                    <constraint firstAttribute="height" constant="75" id="sLN-Zm-egY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="8xB-rn-HqJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3L-Kx-Mav">
+                                <rect key="frame" x="100" y="551" width="824" height="65"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Psv-75-SyO"/>
+                                    <constraint firstAttribute="height" constant="65" id="WvG-uC-bn9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="60"/>
+                                <state key="normal" title="  S  P  A  C  E   ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.82807814273268354" green="0.8457077248371121" blue="0.8465633095854922" alpha="0.74306778169014087" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLetter:" destination="dkx-z0-nzr" eventType="touchUpInside" id="fRG-7D-f3Z"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4NV-EW-4u0">
+                                <rect key="frame" x="955" y="721" width="51" height="31"/>
+                                <connections>
+                                    <action selector="sayLetterChanged:" destination="dkx-z0-nzr" eventType="valueChanged" id="vpC-EI-LI5"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say letter when pressed: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-lg-aKE">
+                                <rect key="frame" x="736" y="726.5" width="204" height="21"/>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-LG-eyx">
+                                <rect key="frame" x="472" y="726.5" width="109" height="21"/>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JyV-Vi-uVa">
+                                <rect key="frame" x="594" y="722" width="104" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bjj-n1-4aF"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderRateChanged:" destination="dkx-z0-nzr" eventType="valueChanged" id="NW8-Gz-9wt"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Pitch:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-0b-Fig">
+                                <rect key="frame" x="204.5" y="726.5" width="112.5" height="21"/>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k3x-IO-NgW">
+                                <rect key="frame" x="330" y="722" width="104" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oyr-rU-nQz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderPitchChanged:" destination="dkx-z0-nzr" eventType="valueChanged" id="TDn-xS-bAh"/>
+                                </connections>
+                            </slider>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-bR-djK">
+                                <rect key="frame" x="20" y="629" width="150" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="S6G-2x-eus"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jQC-H7-fAi" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="18B-qp-nSE"/>
+                            <constraint firstItem="23A-Mz-OwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bNN-VC-fkl" secondAttribute="trailing" constant="8" symbolic="YES" id="1OZ-3W-i1P"/>
+                            <constraint firstItem="Dh6-xH-Ydm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="1Qw-h4-RXW"/>
+                            <constraint firstItem="3e8-Or-waJ" firstAttribute="centerY" secondItem="XPl-bh-jXK" secondAttribute="centerY" id="1Zn-b6-Fbe"/>
+                            <constraint firstItem="k3x-IO-NgW" firstAttribute="leading" secondItem="Roy-0b-Fig" secondAttribute="trailing" constant="15" id="4W5-x6-WEH"/>
+                            <constraint firstItem="Z40-uU-vZf" firstAttribute="leading" secondItem="6dN-mT-nvp" secondAttribute="trailing" constant="25" id="4cK-bz-9YA"/>
+                            <constraint firstItem="bNN-VC-fkl" firstAttribute="top" secondItem="XPl-bh-jXK" secondAttribute="bottom" constant="40" id="4mx-by-Ho0"/>
+                            <constraint firstItem="OBa-Vg-ZGj" firstAttribute="leading" secondItem="23A-Mz-OwH" secondAttribute="trailing" constant="30" id="5Fm-bC-tyH"/>
+                            <constraint firstItem="23A-Mz-OwH" firstAttribute="leading" secondItem="bNN-VC-fkl" secondAttribute="trailing" constant="30" id="5Vi-yl-TPN"/>
+                            <constraint firstItem="t3L-Kx-Mav" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="6WH-jW-iue"/>
+                            <constraint firstItem="YWh-bR-djK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Tb-cn-TC6"/>
+                            <constraint firstItem="9JC-Th-IyI" firstAttribute="centerY" secondItem="hr7-qX-L82" secondAttribute="centerY" id="7ZE-GB-Edb"/>
+                            <constraint firstItem="Roy-0b-Fig" firstAttribute="centerY" secondItem="NVs-lg-aKE" secondAttribute="centerY" id="7tI-dJ-MDa"/>
+                            <constraint firstItem="oqo-wo-02q" firstAttribute="leading" secondItem="Ny4-gs-uSC" secondAttribute="trailing" constant="25" id="8Uz-IE-bvr"/>
+                            <constraint firstItem="h1y-Xf-Yci" firstAttribute="leading" secondItem="Tnr-Vq-Hdp" secondAttribute="trailing" constant="30" id="8ZB-1D-S7g"/>
+                            <constraint firstItem="3e8-Or-waJ" firstAttribute="leading" secondItem="b1c-lu-xFp" secondAttribute="trailing" constant="25" id="8yU-TN-CSG"/>
+                            <constraint firstItem="Tnr-Vq-Hdp" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="8zb-AQ-1Ak"/>
+                            <constraint firstItem="r43-gF-egG" firstAttribute="leading" secondItem="VGa-Pj-Tbr" secondAttribute="trailing" constant="25" id="ANi-lc-9iG"/>
+                            <constraint firstItem="JyV-Vi-uVa" firstAttribute="leading" secondItem="tiF-LG-eyx" secondAttribute="trailing" constant="15" id="BeI-LM-1U8"/>
+                            <constraint firstItem="Ny4-gs-uSC" firstAttribute="leading" secondItem="XPl-bh-jXK" secondAttribute="trailing" constant="25" id="Cxr-uo-Ht7"/>
+                            <constraint firstItem="Z40-uU-vZf" firstAttribute="centerY" secondItem="hr7-qX-L82" secondAttribute="centerY" id="ER8-r8-3Gr"/>
+                            <constraint firstItem="E8h-VJ-iKK" firstAttribute="centerY" secondItem="hr7-qX-L82" secondAttribute="centerY" id="FEj-PP-PfW"/>
+                            <constraint firstItem="pw2-k3-Aip" firstAttribute="leading" secondItem="WwR-PQ-iNl" secondAttribute="trailing" constant="25" id="Fg0-ku-9Hn"/>
+                            <constraint firstItem="VGa-Pj-Tbr" firstAttribute="leading" secondItem="9JC-Th-IyI" secondAttribute="trailing" constant="25" id="FqL-bY-14T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4NV-EW-4u0" secondAttribute="bottom" constant="16" id="Fus-hL-57H"/>
+                            <constraint firstItem="bLi-Vi-kdZ" firstAttribute="centerY" secondItem="hr7-qX-L82" secondAttribute="centerY" id="GY2-ms-MGy"/>
+                            <constraint firstItem="OBa-Vg-ZGj" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="HZd-mi-dGa"/>
+                            <constraint firstItem="tiF-LG-eyx" firstAttribute="leading" secondItem="k3x-IO-NgW" secondAttribute="trailing" constant="40" id="I1W-hp-eym"/>
+                            <constraint firstItem="k3x-IO-NgW" firstAttribute="centerY" secondItem="NVs-lg-aKE" secondAttribute="centerY" id="IVT-22-EgX"/>
+                            <constraint firstItem="t3L-Kx-Mav" firstAttribute="top" secondItem="4qb-xo-gpD" secondAttribute="bottom" constant="50" id="Jk3-t2-2Vh"/>
+                            <constraint firstItem="NVs-lg-aKE" firstAttribute="leading" secondItem="JyV-Vi-uVa" secondAttribute="trailing" constant="40" id="KOq-Lc-eGD"/>
+                            <constraint firstItem="Mpt-eZ-GzO" firstAttribute="leading" secondItem="4qb-xo-gpD" secondAttribute="trailing" constant="30" id="Kg3-M6-rPe"/>
+                            <constraint firstItem="VGa-Pj-Tbr" firstAttribute="centerY" secondItem="hr7-qX-L82" secondAttribute="centerY" id="Km2-JA-bNl"/>
+                            <constraint firstItem="hr7-qX-L82" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="LGQ-RX-QBs"/>
+                            <constraint firstItem="X2Z-t0-5HJ" firstAttribute="centerY" secondItem="Dh6-xH-Ydm" secondAttribute="centerY" id="OwE-lB-1vp"/>
+                            <constraint firstItem="bIe-25-Txj" firstAttribute="leading" secondItem="PLN-pO-XoV" secondAttribute="trailing" constant="25" id="RPC-gT-mdf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t3L-Kx-Mav" secondAttribute="trailing" constant="100" id="TxJ-p3-Lli"/>
+                            <constraint firstItem="X2Z-t0-5HJ" firstAttribute="leading" secondItem="Dh6-xH-Ydm" secondAttribute="trailing" constant="15" id="ULr-FA-HmM"/>
+                            <constraint firstItem="WwR-PQ-iNl" firstAttribute="leading" secondItem="r43-gF-egG" secondAttribute="trailing" constant="25" id="VaY-cv-W4p"/>
+                            <constraint firstItem="jQC-H7-fAi" firstAttribute="leading" secondItem="Mpt-eZ-GzO" secondAttribute="trailing" constant="30" id="XSN-OO-spl"/>
+                            <constraint firstItem="Dh6-xH-Ydm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Xyf-jP-fQ3"/>
+                            <constraint firstItem="h1y-Xf-Yci" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="YtS-bO-lT4"/>
+                            <constraint firstItem="Mpt-eZ-GzO" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="aED-Ha-U0H"/>
+                            <constraint firstItem="qKP-vP-T4W" firstAttribute="centerY" secondItem="Ny4-gs-uSC" secondAttribute="centerY" id="cAc-ZM-viP"/>
+                            <constraint firstItem="qKP-vP-T4W" firstAttribute="leading" secondItem="Q56-F4-Bnj" secondAttribute="trailing" constant="25" id="cSh-9r-39Z"/>
+                            <constraint firstItem="r43-gF-egG" firstAttribute="centerY" secondItem="VGa-Pj-Tbr" secondAttribute="centerY" id="ccu-8O-JhR"/>
+                            <constraint firstItem="tiF-LG-eyx" firstAttribute="centerY" secondItem="NVs-lg-aKE" secondAttribute="centerY" id="ehJ-1W-cqc"/>
+                            <constraint firstItem="bNN-VC-fkl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fFt-Qn-00N"/>
+                            <constraint firstItem="NVs-lg-aKE" firstAttribute="centerY" secondItem="4NV-EW-4u0" secondAttribute="centerY" id="fgj-WX-Mxg"/>
+                            <constraint firstItem="9JC-Th-IyI" firstAttribute="leading" secondItem="E8h-VJ-iKK" secondAttribute="trailing" constant="25" id="fnC-bV-WDq"/>
+                            <constraint firstItem="bLi-Vi-kdZ" firstAttribute="leading" secondItem="Z40-uU-vZf" secondAttribute="trailing" constant="25" id="fr3-Bn-b4Q"/>
+                            <constraint firstItem="b1c-lu-xFp" firstAttribute="leading" secondItem="qKP-vP-T4W" secondAttribute="trailing" constant="25" id="frc-zq-hxJ"/>
+                            <constraint firstItem="E8h-VJ-iKK" firstAttribute="leading" secondItem="bLi-Vi-kdZ" secondAttribute="trailing" constant="25" id="hvM-BD-7PY"/>
+                            <constraint firstItem="6dN-mT-nvp" firstAttribute="leading" secondItem="hr7-qX-L82" secondAttribute="trailing" constant="25" id="iEV-ZE-Usp"/>
+                            <constraint firstItem="XPl-bh-jXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="iji-JW-9qX"/>
+                            <constraint firstItem="oqo-wo-02q" firstAttribute="centerY" secondItem="Ny4-gs-uSC" secondAttribute="centerY" constant="-1" id="jP9-tV-PfG"/>
+                            <constraint firstItem="XPl-bh-jXK" firstAttribute="top" secondItem="hr7-qX-L82" secondAttribute="bottom" constant="40" id="jh4-cU-n5b"/>
+                            <constraint firstItem="Q56-F4-Bnj" firstAttribute="leading" secondItem="bIe-25-Txj" secondAttribute="trailing" constant="25" id="jtQ-ec-Qw2"/>
+                            <constraint firstItem="4NV-EW-4u0" firstAttribute="leading" secondItem="NVs-lg-aKE" secondAttribute="trailing" constant="15" id="jvK-AV-2N1"/>
+                            <constraint firstItem="4qb-xo-gpD" firstAttribute="leading" secondItem="OBa-Vg-ZGj" secondAttribute="trailing" constant="30" id="k5X-NQ-bxu"/>
+                            <constraint firstItem="Q56-F4-Bnj" firstAttribute="centerY" secondItem="Ny4-gs-uSC" secondAttribute="centerY" constant="-1" id="k91-Rk-HdF"/>
+                            <constraint firstItem="Tnr-Vq-Hdp" firstAttribute="leading" secondItem="jQC-H7-fAi" secondAttribute="trailing" constant="30" id="lTt-Bi-lyT"/>
+                            <constraint firstItem="PLN-pO-XoV" firstAttribute="centerY" secondItem="Ny4-gs-uSC" secondAttribute="centerY" constant="-1" id="lkn-To-75c"/>
+                            <constraint firstItem="4qb-xo-gpD" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="lp4-Dc-iVZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X2Z-t0-5HJ" secondAttribute="trailing" constant="16" id="mpe-77-quv"/>
+                            <constraint firstItem="pw2-k3-Aip" firstAttribute="centerY" secondItem="VGa-Pj-Tbr" secondAttribute="centerY" id="mzZ-SU-iF8"/>
+                            <constraint firstItem="Ny4-gs-uSC" firstAttribute="centerY" secondItem="XPl-bh-jXK" secondAttribute="centerY" id="pWk-y5-Z84"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4NV-EW-4u0" secondAttribute="trailing" constant="20" id="qfy-kW-7nO"/>
+                            <constraint firstItem="hr7-qX-L82" firstAttribute="top" secondItem="Dh6-xH-Ydm" secondAttribute="bottom" constant="50" id="rNW-C2-jgQ"/>
+                            <constraint firstItem="YWh-bR-djK" firstAttribute="centerY" secondItem="NVs-lg-aKE" secondAttribute="centerY" id="ret-yR-21K"/>
+                            <constraint firstItem="JyV-Vi-uVa" firstAttribute="centerY" secondItem="NVs-lg-aKE" secondAttribute="centerY" id="s2V-RR-jsO"/>
+                            <constraint firstItem="b1c-lu-xFp" firstAttribute="centerY" secondItem="XPl-bh-jXK" secondAttribute="centerY" id="sXq-qD-LRC"/>
+                            <constraint firstItem="WwR-PQ-iNl" firstAttribute="centerY" secondItem="VGa-Pj-Tbr" secondAttribute="centerY" id="tO1-dM-AGu"/>
+                            <constraint firstItem="23A-Mz-OwH" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="tW7-xb-DU1"/>
+                            <constraint firstItem="bIe-25-Txj" firstAttribute="centerY" secondItem="Ny4-gs-uSC" secondAttribute="centerY" constant="-1" id="vEz-Sg-kI5"/>
+                            <constraint firstItem="PLN-pO-XoV" firstAttribute="leading" secondItem="oqo-wo-02q" secondAttribute="trailing" constant="25" id="vLV-rj-uTW"/>
+                            <constraint firstItem="6dN-mT-nvp" firstAttribute="centerY" secondItem="hr7-qX-L82" secondAttribute="centerY" id="wiQ-TS-vVP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="langPicker" destination="YWh-bR-djK" id="TWV-Ee-Lau"/>
+                        <outlet property="sliderPitch" destination="k3x-IO-NgW" id="gz3-HF-VMe"/>
+                        <outlet property="sliderRate" destination="JyV-Vi-uVa" id="yeS-fa-Qh3"/>
+                        <outlet property="switchSayLetter" destination="4NV-EW-4u0" id="ZRP-p5-ucJ"/>
+                        <outlet property="txtText" destination="Dh6-xH-Ydm" id="dzz-tX-NPc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="79.6875" y="-16.40625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="x.png" width="512" height="320"/>
+    </resources>
 </document>

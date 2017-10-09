@@ -10,6 +10,15 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *txtText;
+@property (weak, nonatomic) IBOutlet UISwitch *switchSayLetter;
+@property (weak, nonatomic) IBOutlet UISlider *sliderRate;
+@property (weak, nonatomic) IBOutlet UISlider *sliderPitch;
+@property (weak, nonatomic) IBOutlet UIPickerView *langPicker;
+
+@property (strong, nonatomic) NSArray *arrOfLang;
+@property (strong, nonatomic) NSArray *arrOfLangNames;
+
 
 @end
 

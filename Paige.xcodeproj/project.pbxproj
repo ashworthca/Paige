@@ -13,6 +13,9 @@
 		FC5FD2EA1F88477D00D297FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5FD2E91F88477D00D297FB /* Assets.xcassets */; };
 		FC5FD2ED1F88477D00D297FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5FD2EB1F88477D00D297FB /* LaunchScreen.storyboard */; };
 		FC5FD2F01F88477D00D297FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5FD2EF1F88477D00D297FB /* main.m */; };
+		FC5FD2F71F886D7800D297FB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5FD2F61F886D7800D297FB /* Icon.png */; };
+		FC5FD2F91F891CEE00D297FB /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5FD2F81F891CEE00D297FB /* x.png */; };
+		FCB3C94F1F8AB83100E599F2 /* DidactGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB3C94D1F8AB69D00E599F2 /* DidactGothic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		FC5FD2EC1F88477D00D297FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC5FD2EE1F88477D00D297FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5FD2EF1F88477D00D297FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC5FD2F61F886D7800D297FB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FC5FD2F81F891CEE00D297FB /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		FCB3C94D1F8AB69D00E599F2 /* DidactGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DidactGothic.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		FC5FD2DF1F88477D00D297FB /* Paige */ = {
 			isa = PBXGroup;
 			children = (
+				FCB3C94E1F8AB6AA00E599F2 /* Fonts */,
+				FC5FD2F81F891CEE00D297FB /* x.png */,
+				FC5FD2F61F886D7800D297FB /* Icon.png */,
 				FC5FD2E01F88477D00D297FB /* AppDelegate.h */,
 				FC5FD2E11F88477D00D297FB /* AppDelegate.m */,
 				FC5FD2E31F88477D00D297FB /* ViewController.h */,
@@ -69,6 +78,14 @@
 				FC5FD2EF1F88477D00D297FB /* main.m */,
 			);
 			path = Paige;
+			sourceTree = "<group>";
+		};
+		FCB3C94E1F8AB6AA00E599F2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3C94D1F8AB69D00E599F2 /* DidactGothic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +146,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB3C94F1F8AB83100E599F2 /* DidactGothic.ttf in Resources */,
+				FC5FD2F71F886D7800D297FB /* Icon.png in Resources */,
 				FC5FD2ED1F88477D00D297FB /* LaunchScreen.storyboard in Resources */,
+				FC5FD2F91F891CEE00D297FB /* x.png in Resources */,
 				FC5FD2EA1F88477D00D297FB /* Assets.xcassets in Resources */,
 				FC5FD2E81F88477D00D297FB /* Main.storyboard in Resources */,
 			);
