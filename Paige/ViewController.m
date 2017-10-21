@@ -87,6 +87,24 @@ bool speekLetter;
     NSLog(@"Slider Pitch: %f", pvalue);
 }
 
+- (IBAction)btnViewSettings:(id)sender {
+    if(_lblSpeechRate.isHidden)
+    {
+        [_lblSpeechPitch setHidden:FALSE];
+        [_lblSpeechRate setHidden:FALSE];
+        [_langPicker setHidden:FALSE];
+        [_sliderPitch setHidden:FALSE];
+        [_sliderRate setHidden:FALSE];
+    }
+    else
+    {
+        [_lblSpeechPitch setHidden:TRUE];
+        [_lblSpeechRate setHidden:TRUE];
+        [_langPicker setHidden:TRUE];
+        [_sliderPitch setHidden:TRUE];
+        [_sliderRate setHidden:TRUE];
+    }
+}
 
 - (IBAction)btnDelete:(id)sender {
     [_txtText setText:@""];

@@ -19,6 +19,9 @@
 @property (strong, nonatomic) NSArray *arrOfLang;
 @property (strong, nonatomic) NSArray *arrOfLangNames;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblSpeechRate;
+@property (weak, nonatomic) IBOutlet UILabel *lblSpeechPitch;
+@property (weak, nonatomic) IBOutlet UIPickerView *pvLangPicker;
 
 @end
 
