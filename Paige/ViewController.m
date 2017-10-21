@@ -41,7 +41,7 @@ bool speekLetter;
     float sPvalue = [[NSUserDefaults standardUserDefaults] floatForKey:@"defaultSpeechPitch"];
     NSLog(@"Pitch Starting value: %f", sPvalue);
     _sliderPitch.maximumValue = 2.0;
-    _sliderPitch.minimumValue = 1.0;
+    _sliderPitch.minimumValue = 0.50;
     _sliderPitch.value = sPvalue;
     
     
@@ -86,10 +86,22 @@ bool speekLetter;
     
     NSLog(@"Slider Pitch: %f", pvalue);
 }
+- (IBAction)btnDefaults:(id)sender {
+    NSLog(@"Rate: %f", AVSpeechUtteranceDefaultSpeechRate );
+    [_sliderRate setValue:AVSpeechUtteranceDefaultSpeechRate];
+    [_sliderPitch setValue:1.0];  // default developer.apple.com/documentation/avfoundation/avspeechutterance/1619683-pitchmultiplier
+    [_langPicker selectRow:3 inComponent:0 animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:_sliderRate.value forKey:@"defaultSpeechRate"];
+    [[NSUserDefaults standardUserDefaults] setFloat:_sliderPitch.value forKey:@"defaultSpeechPitch"];
+    [[NSUserDefaults standardUserDefaults] setInteger:3 forKey:@"defaultLang"];
+    
+}
 
 - (IBAction)btnViewSettings:(id)sender {
     if(_lblSpeechRate.isHidden)
     {
+        [_btnDefaults setHidden:FALSE];
         [_lblSpeechPitch setHidden:FALSE];
         [_lblSpeechRate setHidden:FALSE];
         [_langPicker setHidden:FALSE];
@@ -98,6 +110,7 @@ bool speekLetter;
     }
     else
     {
+        [_btnDefaults setHidden:TRUE];
         [_lblSpeechPitch setHidden:TRUE];
         [_lblSpeechRate setHidden:TRUE];
         [_langPicker setHidden:TRUE];

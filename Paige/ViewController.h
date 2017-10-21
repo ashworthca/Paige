@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblSpeechRate;
 @property (weak, nonatomic) IBOutlet UILabel *lblSpeechPitch;
 @property (weak, nonatomic) IBOutlet UIPickerView *pvLangPicker;
+@property (weak, nonatomic) IBOutlet UIButton *btnDefaults;
 
 @end
 

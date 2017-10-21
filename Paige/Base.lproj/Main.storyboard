@@ -479,19 +479,19 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say letter when pressed: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-lg-aKE">
-                                <rect key="frame" x="749" y="725" width="191" height="24"/>
+                                <rect key="frame" x="736" y="726.5" width="204" height="21"/>
                                 <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-LG-eyx">
-                                <rect key="frame" x="469.5" y="725" width="104.5" height="24"/>
+                                <rect key="frame" x="452" y="726.5" width="109" height="21"/>
                                 <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JyV-Vi-uVa">
-                                <rect key="frame" x="587" y="722" width="104" height="31"/>
+                                <rect key="frame" x="574" y="722" width="104" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="bjj-n1-4aF"/>
                                 </constraints>
@@ -500,13 +500,13 @@
                                 </connections>
                             </slider>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Pitch:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-0b-Fig">
-                                <rect key="frame" x="207.5" y="725" width="107" height="24"/>
+                                <rect key="frame" x="184.5" y="726.5" width="112.5" height="21"/>
                                 <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k3x-IO-NgW">
-                                <rect key="frame" x="327.5" y="722" width="104" height="31"/>
+                                <rect key="frame" x="310" y="722" width="104" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="oyr-rU-nQz"/>
                                 </constraints>
@@ -521,7 +521,7 @@
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60p-mm-6W0">
-                                <rect key="frame" x="709" y="722" width="30" height="30"/>
+                                <rect key="frame" x="696" y="722" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="aXU-53-bTV"/>
                                     <constraint firstAttribute="width" constant="30" id="cWq-CG-FdL"/>
@@ -529,6 +529,16 @@
                                 <state key="normal" image="settings.png"/>
                                 <connections>
                                     <action selector="btnViewSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifw-aM-Q5y"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkR-dK-UeJ">
+                                <rect key="frame" x="688.5" y="676" width="45" height="26"/>
+                                <fontDescription key="fontDescription" name="DidactGothic-Regular" family="Didact Gothic" pointSize="12"/>
+                                <state key="normal" title="Defaults">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDefaults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9HA-6f-N4S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -575,11 +585,13 @@
                             <constraint firstItem="WwR-PQ-iNl" firstAttribute="leading" secondItem="r43-gF-egG" secondAttribute="trailing" constant="25" id="VaY-cv-W4p"/>
                             <constraint firstItem="jQC-H7-fAi" firstAttribute="leading" secondItem="Mpt-eZ-GzO" secondAttribute="trailing" constant="30" id="XSN-OO-spl"/>
                             <constraint firstItem="Dh6-xH-Ydm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Xyf-jP-fQ3"/>
+                            <constraint firstItem="BkR-dK-UeJ" firstAttribute="centerX" secondItem="60p-mm-6W0" secondAttribute="centerX" id="YX8-ho-tR1"/>
                             <constraint firstItem="h1y-Xf-Yci" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="YtS-bO-lT4"/>
                             <constraint firstItem="Mpt-eZ-GzO" firstAttribute="centerY" secondItem="bNN-VC-fkl" secondAttribute="centerY" id="aED-Ha-U0H"/>
                             <constraint firstItem="qKP-vP-T4W" firstAttribute="centerY" secondItem="Ny4-gs-uSC" secondAttribute="centerY" id="cAc-ZM-viP"/>
                             <constraint firstItem="qKP-vP-T4W" firstAttribute="leading" secondItem="Q56-F4-Bnj" secondAttribute="trailing" constant="25" id="cSh-9r-39Z"/>
                             <constraint firstItem="r43-gF-egG" firstAttribute="centerY" secondItem="VGa-Pj-Tbr" secondAttribute="centerY" id="ccu-8O-JhR"/>
+                            <constraint firstItem="60p-mm-6W0" firstAttribute="top" secondItem="BkR-dK-UeJ" secondAttribute="bottom" constant="20" id="eR0-n3-LgU"/>
                             <constraint firstItem="tiF-LG-eyx" firstAttribute="centerY" secondItem="NVs-lg-aKE" secondAttribute="centerY" id="ehJ-1W-cqc"/>
                             <constraint firstItem="bNN-VC-fkl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fFt-Qn-00N"/>
                             <constraint firstItem="NVs-lg-aKE" firstAttribute="centerY" secondItem="4NV-EW-4u0" secondAttribute="centerY" id="fgj-WX-Mxg"/>
@@ -617,6 +629,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnDefaults" destination="BkR-dK-UeJ" id="ve8-W4-EFR"/>
                         <outlet property="langPicker" destination="YWh-bR-djK" id="TWV-Ee-Lau"/>
                         <outlet property="lblSpeechPitch" destination="Roy-0b-Fig" id="Vd9-WQ-4h6"/>
                         <outlet property="lblSpeechRate" destination="tiF-LG-eyx" id="rWc-Pv-OyS"/>
